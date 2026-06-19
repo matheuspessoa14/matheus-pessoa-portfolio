@@ -1,16 +1,105 @@
-# React + Vite
+# Matheus Pessoa | Technology Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio profissional desenvolvido para apresentar minha trajetória acadêmica, experiências, certificações, projetos e competências na área de tecnologia.
 
-Currently, two official plugins are available:
+## Sobre
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Sou graduado em Marketing pela Universidade Veiga de Almeida e atualmente estudante de Análise e Desenvolvimento de Sistemas pela Faculdade Senac.
 
-## React Compiler
+Este portfólio foi criado para reunir minha evolução na área de tecnologia, destacando projetos, experiências, certificações internacionais, cursos complementares e participação em eventos de inovação.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+* React
+* Vite
+* JavaScript
+* CSS3
+* HTML5
+* React Icons
+* Lucide React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidades
+
+* Apresentação profissional
+* Formação acadêmica
+* Experiência profissional
+* Certificações internacionais
+* Cursos complementares
+* Projetos em destaque
+* Eventos e comunidade
+* Contato e redes profissionais
+* Layout responsivo para desktop e dispositivos móveis
+
+## Projetos em Destaque
+
+### GastoCerto
+
+Aplicação Full Stack para controle financeiro pessoal, permitindo gerenciamento de receitas e despesas através de uma interface moderna e intuitiva.
+
+**Tecnologias:**
+
+* React
+* Python
+* Flask
+* SQLite
+* SQLAlchemy
+
+### DevFlow
+
+Plataforma para gerenciamento de tarefas e organização de fluxos de desenvolvimento.
+
+**Status:** Em desenvolvimento.
+
+### CondoFlow
+
+Sistema para gestão condominial, comunicação entre moradores e administração de processos internos.
+
+**Status:** Em desenvolvimento.
+
+## Executando Localmente
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/matheuspessoa14/matheus-pessoa-portfolio.git
+```
+
+Acesse a pasta:
+
+```bash
+cd matheus-pessoa-portfolio
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm run dev
+```
+
+Build de produção:
+
+```bash
+npm run build
+```
+
+## Deploy
+
+Projeto publicado na Vercel:
+
+https://matheus-pessoa-portfolio.vercel.app/
+
+## Contato
+
+* LinkedIn: [www.linkedin.com/in/matheuspessoa1816](http://www.linkedin.com/in/matheuspessoa1816)
+* GitHub: github.com/matheuspessoa14
+* E-mail: [matheustelles1410@gmail.com](mailto:matheustelles1410@gmail.com)
+
+---
+
+Desenvolvido por Matheus Pessoa.
