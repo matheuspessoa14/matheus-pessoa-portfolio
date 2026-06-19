@@ -1,0 +1,140 @@
+.events {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background: #0a0d14;
+}
+
+.events-header {
+  max-width: var(--container);
+  margin: 0 auto 2rem;
+}
+
+.events-header h2 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+
+.events-grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: 0.25s;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.event-top {
+  margin-bottom: 1.4rem;
+}
+
+.event-logo {
+  width: 53px;
+  height: 53px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.event-card h3 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.event-meta span {
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.event-card p {
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 0.95rem;
+
+  margin-bottom: 1.2rem;
+}
+
+.event-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.event-tags span {
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 0.72rem;
+}
+
+.network-box {
+  max-width: var(--container);
+  margin: 1rem auto 0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(96, 165, 250, 0.08),
+    rgba(168, 85, 247, 0.06)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.network-box svg {
+  color: #60a5fa;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.network-box h3 {
+  margin-bottom: 0.5rem;
+}
+
+.network-box p {
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .network-box {
+    flex-direction: column;
+  }
+
+  .events-header h2 {
+    font-size: 2rem;
+  }
+}

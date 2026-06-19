@@ -1,0 +1,136 @@
+.experience {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.experience-header {
+  max-width: var(--container);
+  margin: 0 auto 2rem;
+}
+
+.experience-header h2 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+
+.experience-card {
+  max-width: var(--container);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.8rem;
+  transition: 0.25s;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.experience-company-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.experience-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.experience-company-row h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.experience-company-row p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.experience-role {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+.experience-dot {
+  width: 8px;
+  height: 8px;
+  margin-top: 0.55rem;
+  border-radius: 50%;
+  background: #60a5fa;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.8);
+  flex-shrink: 0;
+}
+
+.experience-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #94a3b8;
+  font-size: 0.82rem;
+  margin-bottom: 0.45rem;
+}
+
+.experience-role h4 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.experience-role p {
+  max-width: 900px;
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.experience-responsibilities {
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.experience-responsibilities span {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-left: 1.5rem;
+}
+
+.experience-tags span {
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 900px) {
+  .experience-role {
+    flex-direction: column;
+  }
+
+  .experience-tags {
+    padding-left: 0;
+  }
+
+  .experience-header h2 {
+    font-size: 2rem;
+  }
+}

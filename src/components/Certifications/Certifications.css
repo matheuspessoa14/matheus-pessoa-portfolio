@@ -1,0 +1,115 @@
+.certifications {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.certifications-header {
+  max-width: var(--container);
+  margin: 0 auto 2rem;
+}
+
+.certifications-header h2 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+
+.certifications-grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.cert-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: 0.25s;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.cert-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.cert-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.cert-link {
+  color: #94a3b8;
+  transition: 0.25s;
+}
+
+.cert-link:hover {
+  color: white;
+}
+
+.cert-card h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.cert-subtitle {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.cert-status {
+  display: inline-block;
+  width: fit-content;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cert-status.preparation {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  color: #a78bfa;
+}
+
+/* TAGS */
+.cert-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.cert-skills span {
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 900px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications-header h2 {
+    font-size: 2rem;
+  }
+}

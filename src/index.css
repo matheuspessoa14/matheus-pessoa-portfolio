@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: white;
+  background-color: #030712;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -200px;
+  left: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.25), transparent 60%);
+  filter: blur(60px);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent 60%);
+  filter: blur(60px);
+  z-index: -1;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+}
+
+:root {
+  --container: 1080px;
+  --section-padding: 90px;
+}
+
+section {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+section > div,
+.hero,
+.navbar {
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,130 @@
+.education {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background: #0a0d14;
+}
+
+.education-header {
+  max-width: var(--container);
+  margin: 0 auto 2rem;
+}
+
+.education-header h2 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+}
+
+.education-grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: 0.25s;
+}
+
+.education-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.education-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.education-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.education-card h3 {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.institution {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.education-description {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.education-status,
+.education-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.education-status {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.education-status.completed {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.education-period {
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.education-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.education-tags span {
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 900px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-header h2 {
+    font-size: 2rem;
+  }
+}
