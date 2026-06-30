@@ -15,7 +15,9 @@ function Projects() {
       <Reveal>
         <div className="projects-header">
           <span className="section-tag">Projetos</span>
-          <h2>Projetos em <span className="highlight">Destaque</span></h2>
+          <h2>
+            Projetos em <span className="highlight">Destaque</span>
+          </h2>
         </div>
 
         <div className="featured-project">
@@ -30,7 +32,7 @@ function Projects() {
                 Projeto concluído
               </span>
 
-              <span className="project-type">Full Stack</span>
+              <span className="project-type">Full Stack Web</span>
             </div>
 
             <h3>GastoCerto</h3>
@@ -71,6 +73,51 @@ function Projects() {
 
         <div className="future-projects">
           <div className="future-card">
+            <div className="project-heading">
+              <span className="project-status completed">
+                <FaCheckCircle />
+                Projeto concluído
+              </span>
+
+              <span className="project-type">Full Stack Mobile</span>
+            </div>
+
+            <h3>CondoFlow</h3>
+
+            <p>
+              Aplicação mobile full stack para gestão condominial, com controle
+              de acesso por perfil, cadastro de moradores, visitantes,
+              encomendas, reservas e ocorrências.
+            </p>
+
+            <div className="project-highlights">
+              <span>Controle de acesso</span>
+              <span>CRUD completo</span>
+              <span>API REST</span>
+              <span>Banco MySQL</span>
+            </div>
+
+            <div className="project-tags">
+              <span>React Native</span>
+              <span>Expo</span>
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>MySQL</span>
+            </div>
+
+            <div className="project-links">
+              <a
+                href="https://github.com/matheuspessoa14/fullstack-mobile-condoflow-app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub />
+                Ver repositório
+              </a>
+            </div>
+          </div>
+
+          <div className="future-card">
             <div className="future-top">
               <FaClock />
               <span>Em desenvolvimento</span>
@@ -87,26 +134,6 @@ function Projects() {
               <span>React</span>
               <span>Spring Boot</span>
               <span>MySQL</span>
-            </div>
-          </div>
-
-          <div className="future-card">
-            <div className="future-top">
-              <FaClock />
-              <span>Em desenvolvimento</span>
-            </div>
-
-            <h3>CondoFlow</h3>
-
-            <p>
-              Aplicação mobile para gestão condominial, comunicação entre moradores e
-              administração de processos internos.
-            </p>
-
-            <div className="project-tags">
-              <span>React-Native</span>
-              <span>Spring Boot</span>
-              <span>Mobile</span>
             </div>
           </div>
         </div>
