@@ -1,94 +1,142 @@
 import "./Education.css";
 import Reveal from "../ui/Reveal";
-import { CalendarDays } from "lucide-react";
+import {
+  CalendarDays,
+  GraduationCap,
+  CheckCircle2,
+  BookOpen,
+} from "lucide-react";
 
 import senacLogo from "../../assets/logos/senac.png";
 import uvaLogo from "../../assets/logos/uva.png";
 
 function Education() {
+  const educationData = [
+    {
+      institution: "Centro Universitário Senac",
+      course: "Análise e Desenvolvimento de Sistemas",
+      logo: senacLogo,
+      logoAlt: "Logo do Centro Universitário Senac",
+      status: "Em andamento",
+      statusType: "current",
+      period: "5º período",
+      conclusion: "Conclusão prevista: Dez/2026",
+      description:
+        "Formação voltada ao desenvolvimento de software, bancos de dados, engenharia de software, arquitetura de sistemas, testes e gestão de projetos.",
+      tags: [
+        "Java",
+        "Python",
+        "Spring Boot",
+        "JavaScript",
+        "SQL",
+        "APIs REST",
+        "JUnit",
+        "Mockito",
+        "Git",
+        "Microsoft Project",
+      ],
+    },
+    {
+      institution: "Universidade Veiga de Almeida",
+      course: "Marketing",
+      logo: uvaLogo,
+      logoAlt: "Logo da Universidade Veiga de Almeida",
+      status: "Concluído",
+      statusType: "completed",
+      period: "Graduação concluída",
+      conclusion: "Maio/2026",
+      description:
+        "Formação em estratégia, comunicação, comportamento do consumidor, produtos e negócios, contribuindo para uma visão orientada ao usuário e aos objetivos organizacionais.",
+      tags: [
+        "Estratégia",
+        "Negócios",
+        "Comunicação",
+        "Marketing Digital",
+        "Produtos",
+        "Comportamento do consumidor",
+      ],
+    },
+  ];
+
   return (
     <section id="education" className="education">
       <Reveal>
         <div className="education-header">
           <span className="section-tag">Educação</span>
-          <h2>Minha formação <span className="highlight">acadêmica</span></h2>
+
+          <h2>
+            Formação
+            <span className="highlight"> acadêmica</span>
+          </h2>
+
+          <p>
+            Minha trajetória acadêmica combina tecnologia, desenvolvimento de
+            software, comunicação e compreensão das necessidades de usuários e
+            organizações.
+          </p>
         </div>
 
         <div className="education-grid">
-          <div className="education-card">
-            <div className="education-top">
-              <img
-                src={senacLogo}
-                alt="Faculdade SENAC"
-                className="education-logo"
-              />
-            </div>
+          {educationData.map((education) => (
+            <article
+              className={`education-card ${education.statusType}`}
+              key={education.course}
+            >
+              <div className="education-card-top">
+                <div className="education-logo-wrapper">
+                  <img
+                    src={education.logo}
+                    alt={education.logoAlt}
+                    className="education-logo"
+                  />
+                </div>
 
-            <h3>Análise e Desenvolvimento de Sistemas</h3>
-            <p className="institution">Faculdade SENAC</p>
+                <span
+                  className={`education-status ${education.statusType}`}
+                >
+                  {education.statusType === "completed" ? (
+                    <CheckCircle2 size={14} />
+                  ) : (
+                    <BookOpen size={14} />
+                  )}
 
-            <p className="education-description">
-              Formação focada em desenvolvimento de software, banco de dados,
-              engenharia de software, arquitetura de sistemas e gestão de
-              projetos.
-            </p>
+                  {education.status}
+                </span>
+              </div>
 
-            <div className="education-meta">
-              <span className="education-status">Em andamento</span>
-              <span className="education-period">
-                <CalendarDays size={14} />
-                4º período • Dez/2026
-              </span>
-            </div>
+              <div className="education-content">
+                <span className="education-type">
+                  <GraduationCap size={15} />
+                  Graduação
+                </span>
 
-            <div className="education-tags">
-              <span>Java</span>
-              <span>Python</span>
-              <span>Spring Boot</span>
-              <span>SQL</span>
-              <span>Javascript</span>
-              <span>API Rest</span>
-              <span>JUnit</span>
-              <span>Mockito</span>
-              <span>Visual Studio Code</span>
-              <span>Eclipse</span>
-              <span>Microsoft Project</span>
-            </div>
-          </div>
+                <h3>{education.course}</h3>
 
-          <div className="education-card">
-            <div className="education-top">
-              <img
-                src={uvaLogo}
-                alt="Universidade Veiga de Almeida"
-                className="education-logo"
-              />
-            </div>
+                <p className="education-institution">
+                  {education.institution}
+                </p>
 
-            <h3>Marketing</h3>
-            <p className="institution">Universidade Veiga de Almeida</p>
+                <p className="education-description">
+                  {education.description}
+                </p>
 
-            <p className="education-description">
-              Formação voltada para estratégia, comunicação, comportamento do
-              consumidor e desenvolvimento de produtos e negócios.
-            </p>
+                <div className="education-meta">
+                  <span>
+                    <CalendarDays size={14} />
+                    {education.period}
+                  </span>
 
-            <div className="education-meta">
-              <span className="education-status completed">Concluído</span>
-              <span className="education-period">
-                <CalendarDays size={14} />
-                Maio/2026
-              </span>
-            </div>
+                  <span>{education.conclusion}</span>
+                </div>
 
-            <div className="education-tags">
-              <span>Estratégia</span>
-              <span>Negócios</span>
-              <span>Comunicação</span>
-              <span>Marketing Digital</span>
-              <span>Produto</span>
-            </div>
-          </div>
+                <div className="education-tags">
+                  {education.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </Reveal>
     </section>

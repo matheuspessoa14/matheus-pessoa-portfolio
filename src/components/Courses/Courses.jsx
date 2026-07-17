@@ -9,15 +9,6 @@ import udemyLogo from "../../assets/logos/udemy.png";
 function Courses() {
   const courses = [
     {
-      title: "Programador Front-End com IA",
-      institution: "SENAC",
-      logo: senacLogo,
-      period: "80h • Jan/2026",
-      status: "Concluído",
-      link: "https://drive.google.com/file/d/1YrcGIfn_-eQh1K3HFvfaYmChjkM3htBE/view?usp=sharing",
-      skills: ["Frontend", "IA", "HTML", "CSS", "JavaScript", "Angular", "React"],
-    },
-    {
       title: "Programador Back-End",
       institution: "SENAI",
       logo: senaiLogo,
@@ -45,6 +36,24 @@ function Courses() {
       skills: ["Redes", "Infraestrutura", "TCP/IP"],
     },
     {
+      title: "Inteligência Artificial aplicada à Indústria 4.0",
+      institution: "SENAI",
+      logo: senaiLogo,
+      period: "200h • Jun/2026",
+      status: "Concluído",
+      link: "#",
+      skills: ["Inteligência Artificial", "Indústria 4.0", "Machine Learning"],
+    },
+    {
+      title: "Programador Front-End com IA",
+      institution: "SENAC",
+      logo: senacLogo,
+      period: "80h • Jan/2026",
+      status: "Concluído",
+      link: "https://drive.google.com/file/d/1YrcGIfn_-eQh1K3HFvfaYmChjkM3htBE/view?usp=sharing",
+      skills: ["Frontend", "IA", "HTML", "CSS", "JavaScript", "Angular", "React"],
+    },
+    {
       title: "Git & GitHub",
       institution: "Udemy",
       logo: udemyLogo,
@@ -52,15 +61,6 @@ function Courses() {
       status: "Concluído",
       link: "https://drive.google.com/file/d/1UwtyFk8B9sFe-hfMHGaJ4IR7XPRfOgqq/view?usp=sharing",
       skills: ["Git", "GitHub", "Versionamento"],
-    },
-    {
-      title: "Operador de Sistemas Computacionais em Redes",
-      institution: "SENAI",
-      logo: senaiLogo,
-      period: "Em andamento",
-      status: "Em andamento",
-      link: "#",
-      skills: ["Redes", "Sistemas", "Suporte"],
     },
   ];
 
@@ -70,7 +70,7 @@ function Courses() {
         <div className="courses-header">
           <span className="section-tag">Cursos Complementares</span>
 
-          <h2>Aprendizado contínuo <span className="highlight">além da graduação</span></h2>
+          <h2>Formação <span className="highlight">complementar</span></h2>
         </div>
 
         <div className="courses-grid">

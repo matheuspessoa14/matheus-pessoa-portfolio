@@ -5,9 +5,19 @@ import { ExternalLink } from "lucide-react";
 import microsoftLogo from "../../assets/logos/microsoft.png";
 import ciscoLogo from "../../assets/logos/cisco.png";
 import ibmLogo from "../../assets/logos/ibm.png";
+import awsLogo from "../../assets/logos/aws.png";
 
 function Certifications() {
   const certifications = [
+    {
+      title: "AWS Academy Graduate",
+      subtitle: "Cloud Foundations – Training Badge",
+      issuer: "AWS Academy",
+      logo: awsLogo,
+      link: "https://www.credly.com/go/43CDyK5D",
+      skills: ["AWS", "Cloud Computing", "Cloud Foundations"],
+      status: "Concluído",
+    },
     {
       title: "AZ-900",
       subtitle: "Microsoft Azure Fundamentals",
@@ -67,27 +77,17 @@ function Certifications() {
       subtitle: "Microsoft Security, Compliance, and Identity Fundamentals",
       issuer: "Microsoft",
       logo: microsoftLogo,
-      link: "#",
+      link: null,
       skills: ["Security", "Compliance", "Identity"],
       status: "Em preparação",
     },
-
     {
       title: "DP-900",
       subtitle: "Microsoft Azure Data Fundamentals",
       issuer: "Microsoft",
       logo: microsoftLogo,
-      link: "#",
+      link: null,
       skills: ["Data", "Azure", "Cloud"],
-      status: "Em preparação",
-    },
-    {
-      title: "AB-900",
-      subtitle: "Microsoft 365 Copilot and Agent Administration Fundamentals",
-      issuer: "Microsoft",
-      logo: microsoftLogo,
-      link: "#",
-      skills: ["Microsoft 365", "Copilot", "AI Agents"],
       status: "Em preparação",
     },
   ];
@@ -96,25 +96,38 @@ function Certifications() {
     <section id="certifications" className="certifications">
       <Reveal>
         <div className="certifications-header">
-          <span className="section-tag">Certificações Internacionais</span>
+          <span className="section-tag">
+            Certificações e Credenciais
+          </span>
 
-          <h2>Conhecimentos validados por <span className="highlight">empresas globais</span></h2>
+          <h2>
+            Formação contínua com{" "}
+            <span className="highlight">empresas globais</span>
+          </h2>
         </div>
 
         <div className="certifications-grid">
-          {certifications.map((cert, index) => (
-            <div className="cert-card" key={index}>
+          {certifications.map((cert) => (
+            <article className="cert-card" key={cert.title}>
               <div className="cert-top">
-                <img src={cert.logo} alt={cert.issuer} className="cert-logo" />
+                <img
+                  src={cert.logo}
+                  alt={`Logo da ${cert.issuer}`}
+                  className="cert-logo"
+                />
 
-                <a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="cert-link"
-                >
-                  <ExternalLink size={18} />
-                </a>
+                {cert.link && (
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="cert-link"
+                    aria-label={`Ver credencial ${cert.title}`}
+                    title={`Ver credencial ${cert.title}`}
+                  >
+                    <ExternalLink size={18} />
+                  </a>
+                )}
               </div>
 
               <h3>{cert.title}</h3>
@@ -132,11 +145,11 @@ function Certifications() {
               </span>
 
               <div className="cert-skills">
-                {cert.skills.map((skill, i) => (
-                  <span key={i}>{skill}</span>
+                {cert.skills.map((skill) => (
+                  <span key={skill}>{skill}</span>
                 ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </Reveal>

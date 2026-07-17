@@ -7,121 +7,139 @@ import {
   Database,
   ShieldCheck,
   BarChart3,
-  BriefcaseBusiness,
+  Cloud,
 } from "lucide-react";
 
 function Skills() {
+  const skillGroups = [
+    {
+      icon: <Monitor size={23} />,
+      title: "Frontend",
+      description:
+        "Construção de interfaces responsivas, componentes reutilizáveis e experiências para web e mobile.",
+      skills: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "React Native",
+        "Angular",
+        "Bootstrap",
+      ],
+    },
+    {
+      icon: <Server size={23} />,
+      title: "Backend & APIs",
+      description:
+        "Desenvolvimento de regras de negócio, APIs REST e integração entre aplicações e bancos de dados.",
+      skills: [
+        "Java",
+        "Python",
+        "Spring Boot",
+        "Flask",
+        "APIs REST",
+        "JPA",
+        "Hibernate",
+        "Maven",
+      ],
+    },
+    {
+      icon: <Database size={23} />,
+      title: "Bancos de dados",
+      description:
+        "Modelagem, persistência e manipulação de dados em bancos relacionais.",
+      skills: [
+        "SQL",
+        "MySQL",
+        "SQL Server",
+        "PostgreSQL",
+        "SQLite",
+        "Modelagem de dados",
+      ],
+    },
+    {
+      icon: <ShieldCheck size={23} />,
+      title: "Qualidade & Versionamento",
+      description:
+        "Práticas para aumentar a confiabilidade do código e organizar o desenvolvimento colaborativo.",
+      skills: [
+        "Git",
+        "GitHub",
+        "JUnit",
+        "Mockito",
+        "Selenium",
+        "Testes unitários",
+        "Boas práticas",
+      ],
+    },
+    {
+      icon: <BarChart3 size={23} />,
+      title: "Dados & BI",
+      description:
+        "Organização, análise e visualização de informações para apoiar decisões.",
+      skills: [
+        "Excel",
+        "Power BI",
+        "Análise de dados",
+        "Dashboards",
+        "Indicadores",
+        "Visualização de dados",
+      ],
+    },
+    {
+      icon: <Cloud size={23} />,
+      title: "Cloud, infraestrutura & ferramentas",
+      description:
+        "Conhecimentos fundamentais em nuvem, redes e ferramentas utilizadas no desenvolvimento.",
+      skills: [
+        "Microsoft Azure",
+        "AWS",
+        "Cloud Computing",
+        "Redes",
+        "Cisco Packet Tracer",
+        "VS Code",
+        "Eclipse",
+        "Microsoft Project",
+      ],
+    },
+  ];
+
   return (
     <section id="skills" className="skills">
       <Reveal>
         <div className="skills-header">
-          <span className="section-tag">
-            Hard Skills & Habilidades
-          </span>
+          <span className="section-tag">Competências técnicas</span>
 
           <h2>
-            Tecnologias, <span className="highlight">Ferramentas</span> e Conhecimentos
+            Tecnologias e conhecimentos aplicados em
+            <span className="highlight"> projetos práticos</span>
           </h2>
 
+          <p>
+            Competências desenvolvidas durante minha formação acadêmica,
+            certificações, estudos independentes e construção de aplicações.
+          </p>
         </div>
 
         <div className="skills-grid">
+          {skillGroups.map((group) => (
+            <article className="skill-card" key={group.title}>
+              <div className="skill-card-header">
+                <div className="skill-icon">{group.icon}</div>
 
-          <div className="skill-card">
-            <div className="skill-icon">
-              <Monitor size={24} />
-            </div>
+                <h3>{group.title}</h3>
+              </div>
 
-            <h3>Frontend</h3>
+              <p className="skill-description">{group.description}</p>
 
-            <div className="skill-tags">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
-              <span>React</span>
-              <span>Angular</span>
-              <span>Bootstrap</span>
-            </div>
-          </div>
-
-          <div className="skill-card">
-            <div className="skill-icon">
-              <Server size={24} />
-            </div>
-
-            <h3>Backend</h3>
-
-            <div className="skill-tags">
-              <span>Java</span>
-              <span>Python</span>
-              <span>APIs REST</span>
-              <span>Spring Boot</span>
-              <span>Flask</span>
-            </div>
-          </div>
-
-          <div className="skill-card">
-            <div className="skill-icon">
-              <Database size={24} />
-            </div>
-
-            <h3>Banco de Dados</h3>
-
-            <div className="skill-tags">
-              <span>SQL</span>
-              <span>MySQL</span>
-              <span>PostgreSQL</span>
-              <span>SQLite</span>
-              <span>Modelagem</span>
-            </div>
-          </div>
-
-          <div className="skill-card">
-            <div className="skill-icon">
-              <ShieldCheck size={24} />
-            </div>
-
-            <h3>Qualidade de Software</h3>
-
-            <div className="skill-tags">
-              <span>JUnit</span>
-              <span>Mockito</span>
-              <span>Testes Unitários</span>
-              <span>Boas Práticas</span>
-            </div>
-          </div>
-
-          <div className="skill-card">
-            <div className="skill-icon">
-              <BarChart3 size={24} />
-            </div>
-
-            <h3>Dados & BI</h3>
-
-            <div className="skill-tags">
-              <span>Excel</span>
-              <span>Power BI</span>
-              <span>Análise de Dados</span>
-              <span>Dashboards</span>
-            </div>
-          </div>
-
-          <div className="skill-card">
-            <div className="skill-icon">
-              <BriefcaseBusiness size={24} />
-            </div>
-
-            <h3>Ferramentas & Gestão </h3>
-
-            <div className="skill-tags">
-              <span>Visual Studio Code</span>
-              <span>Eclipse</span>
-              <span>Microsoft Project</span>
-              <span>Scrum</span>
-              <span>Cisco Packet Tracer</span>
-            </div>
-          </div>
-
+              <div className="skill-tags">
+                {group.skills.map((skill) => (
+                  <span key={skill}>{skill}</span>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </Reveal>
     </section>

@@ -4,126 +4,269 @@
   background: #0a0d14;
 }
 
+/* Cabeçalho */
+
 .events-header {
   max-width: var(--container);
-  margin: 0 auto 2rem;
+  margin: 0 auto 2.5rem;
 }
 
 .events-header h2 {
-  font-size: 2.4rem;
+  max-width: 720px;
+  margin-bottom: 1rem;
+
+  font-size: clamp(2rem, 4vw, 2.5rem);
   line-height: 1.15;
+  letter-spacing: -0.03em;
 }
+
+.events-header > p {
+  max-width: 680px;
+
+  color: #94a3b8;
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+/* Grade de eventos */
 
 .events-grid {
   max-width: var(--container);
   margin: 0 auto;
+
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
+/* Card */
+
 .event-card {
-  background: rgba(255, 255, 255, 0.025);
+  min-height: 310px;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(96, 165, 250, 0.08),
+      transparent 36%
+    ),
+    rgba(255, 255, 255, 0.025);
+
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  padding: 1.5rem;
-  transition: 0.25s;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .event-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: rgba(96, 165, 250, 0.35);
+  background-color: rgba(255, 255, 255, 0.035);
 }
 
+/* Parte superior */
+
 .event-top {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.35rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.event-logo-wrapper {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.45rem;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
 }
 
 .event-logo {
-  width: 53px;
-  height: 53px;
+  width: 100%;
+  height: 100%;
+
+  display: block;
   object-fit: contain;
-  border-radius: 10px;
 }
 
-.event-card h3 {
-  color: white;
-  font-size: 1.25rem;
-  margin-bottom: 0.8rem;
-}
-
-.event-meta {
+.event-years {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  justify-content: flex-end;
+  gap: 0.4rem;
 }
 
-.event-meta span {
+.event-years span {
+  padding: 5px 10px;
+
   color: #cbd5e1;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 5px 10px;
   border-radius: 999px;
+
   font-size: 0.72rem;
   font-weight: 600;
 }
 
-.event-card p {
-  color: #94a3b8;
-  line-height: 1.7;
-  font-size: 0.95rem;
+/* Conteúdo */
 
-  margin-bottom: 1.2rem;
+.event-card h3 {
+  margin-bottom: 0.75rem;
+
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.3;
 }
 
+.event-card > p {
+  margin-bottom: 1.2rem;
+
+  color: #94a3b8;
+  font-size: 0.94rem;
+  line-height: 1.75;
+
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+/* Etiquetas */
+
 .event-tags {
+  margin-top: auto;
+
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
 }
 
 .event-tags span {
+  padding: 5px 9px;
+
   color: #cbd5e1;
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 5px 9px;
   border-radius: 8px;
+
   font-size: 0.72rem;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
+
+.event-tags span:hover {
+  color: #ffffff;
+  background: rgba(96, 165, 250, 0.08);
+  border-color: rgba(96, 165, 250, 0.22);
+}
+
+/* LinkedIn */
 
 .network-box {
   max-width: var(--container);
   margin: 1rem auto 0;
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
   padding: 1.5rem;
-  border-radius: 18px;
-  background: linear-gradient(
-    135deg,
-    rgba(96, 165, 250, 0.08),
-    rgba(168, 85, 247, 0.06)
-  );
+
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.2rem;
+
+  color: inherit;
+  text-decoration: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(96, 165, 250, 0.08),
+      rgba(168, 85, 247, 0.06)
+    );
 
   border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
 }
 
-.network-box svg {
-  color: #60a5fa;
-  font-size: 1.6rem;
+.network-box:hover {
+  transform: translateY(-3px);
+  border-color: rgba(96, 165, 250, 0.35);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.network-icon {
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  border-radius: 14px;
 }
 
-.network-box h3 {
-  margin-bottom: 0.5rem;
+.network-icon svg {
+  font-size: 1.45rem;
 }
 
-.network-box p {
+.network-content h3 {
+  margin-bottom: 0.4rem;
+
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
+.network-content p {
+  max-width: 760px;
+
   color: #94a3b8;
+  font-size: 0.92rem;
   line-height: 1.7;
-  font-size: 0.95rem;
 }
+
+.network-link {
+  color: #60a5fa;
+  font-size: 0.82rem;
+  font-weight: 650;
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.network-box:hover .network-link {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* Responsividade */
 
 @media (max-width: 900px) {
   .events-grid {
@@ -131,10 +274,43 @@
   }
 
   .network-box {
-    flex-direction: column;
+    grid-template-columns: auto minmax(0, 1fr);
   }
 
+  .network-link {
+    grid-column: 2;
+    justify-self: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
   .events-header h2 {
-    font-size: 2rem;
+    font-size: 1.85rem;
+  }
+
+  .event-card {
+    min-height: auto;
+    padding: 1.25rem;
+  }
+
+  .event-card > p {
+    text-align: left;
+    hyphens: none;
+  }
+
+  .event-logo-wrapper {
+    width: 54px;
+    height: 54px;
+  }
+
+  .network-box {
+    padding: 1.25rem;
+
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+
+  .network-link {
+    grid-column: 1;
   }
 }

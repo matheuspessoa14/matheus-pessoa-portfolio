@@ -6,87 +6,106 @@ import webSummitLogo from "../../assets/logos/websummit.png";
 import riwLogo from "../../assets/logos/riw.png";
 
 function Events() {
+  const events = [
+    {
+      name: "Web Summit Rio",
+      logo: webSummitLogo,
+      logoAlt: "Logo do Web Summit Rio",
+      years: ["2025", "2026"],
+      description:
+        "Participação em palestras, painéis e experiências sobre tecnologia, inteligência artificial, startups, inovação e transformação digital.",
+      tags: ["IA", "Startups", "Networking", "Inovação"],
+    },
+    {
+      name: "Rio Innovation Week",
+      logo: riwLogo,
+      logoAlt: "Logo do Rio Innovation Week",
+      years: ["2025", "2026"],
+      description:
+        "Participação em palestras e experiências relacionadas a tecnologia, negócios, empreendedorismo, inovação e futuro do mercado.",
+      tags: [
+        "Tecnologia",
+        "Negócios",
+        "Empreendedorismo",
+        "Comunidade",
+        "Networking",
+      ],
+    },
+  ];
+
   return (
     <section id="events" className="events">
       <Reveal>
         <div className="events-header">
-          <span className="section-tag">Eventos & Comunidade</span>
-          <h2>Conectado ao <span className="highlight">ecossistema de inovação.</span></h2>
+          <span className="section-tag">Eventos e comunidade</span>
+
+          <h2>
+            Participação no{" "}
+            <span className="highlight">ecossistema de inovação</span>
+          </h2>
+
+          <p>
+            Participação em eventos de tecnologia e inovação para acompanhar
+            tendências, ampliar conhecimentos e fortalecer conexões
+            profissionais.
+          </p>
         </div>
 
         <div className="events-grid">
-          <div className="event-card">
-            <div className="event-top">
-              <img
-                src={webSummitLogo}
-                alt="Web Summit Rio"
-                className="event-logo"
-              />
-            </div>
+          {events.map((event) => (
+            <article className="event-card" key={event.name}>
+              <div className="event-top">
+                <div className="event-logo-wrapper">
+                  <img
+                    src={event.logo}
+                    alt={event.logoAlt}
+                    className="event-logo"
+                  />
+                </div>
 
-            <h3>Web Summit Rio</h3>
+                <div className="event-years">
+                  {event.years.map((year) => (
+                    <span key={year}>{year}</span>
+                  ))}
+                </div>
+              </div>
 
-            <div className="event-meta">
-              <span>2025</span>
-              <span>2026</span>
-            </div>
+              <h3>{event.name}</h3>
 
-            <p>
-              Participação em conteúdos sobre tecnologia, inteligência
-              artificial, startups, inovação e transformação digital.
-            </p>
+              <p>{event.description}</p>
 
-            <div className="event-tags">
-              <span>IA</span>
-              <span>Startups</span>
-              <span>Networking</span>
-              <span>Inovação</span>
-            </div>
-          </div>
-
-          <div className="event-card">
-            <div className="event-top">
-              <img
-                src={riwLogo}
-                alt="Rio Innovation Week"
-                className="event-logo"
-              />
-            </div>
-
-            <h3>Rio Innovation Week</h3>
-
-            <div className="event-meta">
-              <span>2025</span>
-              <span>2026</span>
-            </div>
-
-            <p>
-              Participação em painéis e experiências voltadas para tecnologia,
-              negócios, empreendedorismo e futuro do mercado.
-            </p>
-
-            <div className="event-tags">
-              <span>Tecnologia</span>
-              <span>Negócios</span>
-              <span>Futuro</span>
-              <span>Comunidade</span>
-              <span>Networking</span>
-            </div>
-          </div>
+              <div className="event-tags">
+                {event.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
 
-        <div className="network-box">
-          <FaLinkedin />
+        <a
+          href="https://www.linkedin.com/in/matheuspessoa1816"
+          target="_blank"
+          rel="noreferrer"
+          className="network-box"
+          aria-label="Acessar o LinkedIn de Matheus Pessoa"
+        >
+          <div className="network-icon">
+            <FaLinkedin />
+          </div>
 
-          <div>
-            <h3>Networking em crescimento</h3>
+          <div className="network-content">
+            <h3>Rede profissional em crescimento</h3>
 
             <p>
-              Mais de 1.300 conexões no LinkedIn, acompanhando profissionais,
-              empresas, oportunidades e tendências do mercado de tecnologia.
+              Mais de 1.300 conexões no LinkedIn, utilizando a plataforma para
+              acompanhar empresas, interagir com profissionais, compartilhar
+              projetos e conhecer oportunidades no mercado de tecnologia.
             </p>
           </div>
-        </div>
+
+          <span className="network-link">Acessar LinkedIn →</span>
+        </a>
       </Reveal>
     </section>
   );

@@ -5,9 +5,11 @@ import {
   FaCheckCircle,
   FaClock,
   FaFolderOpen,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 
 import gastocertoImg from "../../assets/projects/gastocerto.png";
+import repertorioImg from "../../assets/projects/repertorio.png";
 
 function Projects() {
   return (
@@ -16,7 +18,7 @@ function Projects() {
         <div className="projects-header">
           <span className="section-tag">Projetos</span>
           <h2>
-            Projetos em <span className="highlight">Destaque</span>
+            Projetos em <span className="highlight">destaque</span>
           </h2>
         </div>
 
@@ -66,6 +68,66 @@ function Projects() {
               >
                 <FaGithub />
                 Ver repositório
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="featured-project repertorio-project">
+          <div className="project-image repertorio-image">
+            <img src={repertorioImg} alt="Preview do projeto RepertóRio" />
+          </div>
+
+          <div className="featured-content">
+            <div className="project-heading">
+              <span className="project-status completed">
+                <FaCheckCircle />
+                Projeto concluído
+              </span>
+
+              <span className="project-type">Frontend Web</span>
+            </div>
+
+            <h3>RepertóRio</h3>
+
+            <p>
+              Aplicação frontend desenvolvida em React para uma avaliação
+              técnica da Fundação João Goulart, com interface responsiva, dados
+              dinâmicos e navegação entre publicações da plataforma RepertóRio.
+            </p>
+
+            <div className="project-highlights">
+              <span>Interface responsiva</span>
+              <span>Dados dinâmicos</span>
+              <span>Filtro por categoria</span>
+              <span>Publicações relacionadas</span>
+            </div>
+
+            <div className="project-tags">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>Vite</span>
+              <span>CSS</span>
+              <span>JSON</span>
+            </div>
+
+            <div className="project-links">
+              <a
+                href="https://github.com/matheuspessoa14/technical-challenge-frontend-react-repertorio-fjg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub />
+                Ver repositório
+              </a>
+
+              <a
+                href="https://repertorio-fjg-matheus-pessoa.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaExternalLinkAlt />
+                Ver aplicação
               </a>
             </div>
           </div>

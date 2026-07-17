@@ -3,6 +3,8 @@
   padding-bottom: var(--section-padding);
 }
 
+/* Cabeçalho da seção */
+
 .projects-header {
   max-width: var(--container);
   margin: 0 auto 2rem;
@@ -13,17 +15,24 @@
   line-height: 1.15;
 }
 
+/* Projetos em destaque */
+
 .featured-project {
   max-width: var(--container);
   margin: 0 auto 1rem;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
+  align-items: stretch;
   gap: 1rem;
+  padding: 1rem;
+
   background: rgba(255, 255, 255, 0.025);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  padding: 1rem;
-  transition: 0.25s;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .featured-project:hover {
@@ -31,19 +40,53 @@
   border-color: rgba(96, 165, 250, 0.35);
 }
 
+/* Imagem padrão dos projetos em destaque */
+
 .project-image {
   overflow: hidden;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0d1522;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
   min-height: 310px;
-  object-fit: cover;
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
+
+/* Ajuste exclusivo do RepertóRio */
+
+.repertorio-project {
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.repertorio-image {
+  width: 100%;
+  height: fit-content;
+  min-height: 0;
+  align-self: center;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 14px;
+}
+
+.repertorio-image img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 14px;
+}
+
+/* Conteúdo dos projetos em destaque */
 
 .featured-content {
   padding: 1rem;
@@ -55,6 +98,7 @@
 .project-heading {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -72,8 +116,8 @@
 }
 
 .completed {
-  background: rgba(34, 197, 94, 0.1);
   color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
   border: 1px solid rgba(34, 197, 94, 0.2);
 }
 
@@ -84,8 +128,8 @@
 }
 
 .featured-content h3 {
-  font-size: 1.8rem;
   margin-bottom: 0.8rem;
+  font-size: 1.8rem;
 }
 
 .featured-content p,
@@ -96,21 +140,27 @@
   font-size: 0.95rem;
 }
 
+/* Destaques dos projetos */
+
 .project-highlights {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.5rem;
   margin: 1rem 0;
 }
 
 .project-highlights span {
+  padding: 7px 10px;
+  border-radius: 10px;
+
   color: #cbd5e1;
   background: rgba(96, 165, 250, 0.06);
   border: 1px solid rgba(96, 165, 250, 0.12);
-  padding: 7px 10px;
-  border-radius: 10px;
+
   font-size: 0.78rem;
 }
+
+/* Tecnologias */
 
 .project-tags {
   display: flex;
@@ -121,17 +171,22 @@
 
 .project-tags span,
 .github-items span {
+  padding: 5px 9px;
+  border-radius: 8px;
+
   color: #cbd5e1;
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 5px 9px;
-  border-radius: 8px;
+
   font-size: 0.72rem;
 }
+
+/* Links dos projetos */
 
 .project-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -139,30 +194,41 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+
   color: #cbd5e1;
   text-decoration: none;
   font-size: 0.9rem;
-  transition: 0.25s;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .project-links a:hover {
-  color: white;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
+
+/* Cards menores */
 
 .future-projects {
   max-width: var(--container);
   margin: 1rem auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .future-card {
+  padding: 1.5rem;
+
   background: rgba(255, 255, 255, 0.025);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
-  padding: 1.5rem;
-  transition: 0.25s;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .future-card:hover {
@@ -174,42 +240,52 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 1rem;
+
   color: #facc15;
   font-size: 0.78rem;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 
 .future-card h3 {
-  font-size: 1.25rem;
   margin-bottom: 0.7rem;
+  font-size: 1.25rem;
 }
+
+/* Seção do GitHub */
 
 .github-section {
   max-width: var(--container);
   margin: 1rem auto 0;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem;
+
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+
   background:
-    radial-gradient(circle at top left, rgba(96, 165, 250, 0.12), transparent 35%),
+    radial-gradient(
+      circle at top left,
+      rgba(96, 165, 250, 0.12),
+      transparent 35%
+    ),
     rgba(255, 255, 255, 0.025);
 }
 
 .github-icon {
   width: 48px;
   height: 48px;
-  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: #60a5fa;
   background: rgba(96, 165, 250, 0.1);
   border: 1px solid rgba(96, 165, 250, 0.18);
+  border-radius: 14px;
 }
 
 .github-icon svg {
@@ -217,8 +293,8 @@
 }
 
 .github-section h3 {
-  font-size: 1.3rem;
   margin-bottom: 0.45rem;
+  font-size: 1.3rem;
 }
 
 .github-section p {
@@ -235,16 +311,21 @@
 .github-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.7rem;
   white-space: nowrap;
   padding: 12px 18px;
-  background: white;
-  color: black;
+
+  color: #000000;
+  background: #ffffff;
   text-decoration: none;
   border-radius: 12px;
   font-size: 0.9rem;
   font-weight: 700;
-  transition: 0.25s;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .github-button svg {
@@ -253,7 +334,10 @@
 
 .github-button:hover {
   transform: translateY(-3px);
+  background: #e2e8f0;
 }
+
+/* Responsividade */
 
 @media (max-width: 900px) {
   .featured-project,
@@ -266,7 +350,69 @@
     font-size: 2rem;
   }
 
+  .featured-content {
+    padding: 0.5rem;
+  }
+
+  .project-image img {
+    min-height: 240px;
+  }
+
+  .repertorio-image {
+    aspect-ratio: 16 / 9;
+    padding: 0.5rem;
+  }
+
+  .repertorio-image img {
+    min-height: 0;
+  }
+
+  .github-button {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .featured-project {
+    padding: 0.75rem;
+    border-radius: 16px;
+  }
+
+  .project-image {
+    border-radius: 12px;
+  }
+
+  .project-image img {
+    min-height: 200px;
+  }
+
+  .repertorio-image {
+    aspect-ratio: auto;
+  }
+
+  .repertorio-image img {
+    height: auto;
+    min-height: 0;
+  }
+
+  .featured-content h3 {
+    font-size: 1.5rem;
+  }
+
   .project-highlights {
     grid-template-columns: 1fr;
+  }
+
+  .future-card,
+  .github-section {
+    padding: 1.2rem;
+  }
+
+  .github-section {
+    gap: 1rem;
   }
 }

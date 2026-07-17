@@ -1,45 +1,77 @@
 import "./Hero.css";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaArrowRight,
+  FaFileAlt,
+} from "react-icons/fa";
 
 import heroImg from "/glidi-photo.png";
 
 function Hero() {
+  const technologies = [
+    "React",
+    "Java",
+    "Spring Boot",
+    "Python",
+    "SQL",
+  ];
+
   return (
     <section id="home" className="hero">
-      {/* TEXT CONTENT */}
       <div className="hero-content">
-        <span className="badge">
-          Desenvolvedor Full Stack • Dados • IA
+        <div className="hero-status">
+          <span className="status-dot"></span>
+          Disponível para oportunidades de estágio em TI
+        </div>
+
+        <span className="hero-eyebrow">
+          Desenvolvimento Web • Dados • Inteligência Artificial
         </span>
 
         <h1>
-          Construindo aplicações que unem tecnologia, dados e  
-          <span className="highlight"> negócio</span>
+          Desenvolvo soluções digitais que conectam
+          <span className="highlight"> código, dados e negócio</span>
         </h1>
 
-        <p>
-          Hello World :) Meu nome é Matheus Pessoa Telles, tenho 21 anos, sou graduado em Marketing pela Universidade Veiga de Almeida e atualmente curso Análise e Desenvolvimento de Sistemas pela Faculdade Senac.
-        </p>
-        <p>
-          Busco transformar conhecimento em experiência prática através de projetos, certificações e participação ativa no ecossistema de tecnologia, com foco em desenvolvimento web, dados e inteligência artificial.
+        <p className="hero-description">
+          Sou Matheus Pessoa Telles, graduado em Marketing e estudante de
+          Análise e Desenvolvimento de Sistemas. Desenvolvo aplicações web e
+          projetos full stack utilizando tecnologias como React, Java, Spring
+          Boot, Python e bancos de dados.
         </p>
 
+        <p className="hero-objective">
+          Busco uma oportunidade para contribuir com projetos reais, aprender
+          com profissionais experientes e evoluir nas áreas de desenvolvimento,
+          dados e inteligência artificial.
+        </p>
+
+        <div className="hero-technologies">
+          {technologies.map((technology) => (
+            <span key={technology}>{technology}</span>
+          ))}
+        </div>
+
         <div className="hero-actions">
+          <a href="#projects" className="btn-primary">
+            Ver projetos
+            <FaArrowRight />
+          </a>
+
           <a
             href="/cv.pdf"
             target="_blank"
             rel="noreferrer"
-            className="btn-primary"
+            className="btn-secondary"
           >
-            Ver Currículo
-          </a>
-
-          <a href="#projects" className="btn-secondary">
-            Ver Projetos
+            <FaFileAlt />
+            Ver currículo
           </a>
 
           <a href="#contact" className="btn-link">
-            Vamos conversar →
+            Falar comigo
           </a>
         </div>
 
@@ -48,6 +80,7 @@ function Hero() {
             href="https://github.com/matheuspessoa14"
             target="_blank"
             rel="noreferrer"
+            aria-label="Acessar GitHub de Matheus Pessoa"
           >
             <FaGithub />
             GitHub
@@ -57,23 +90,28 @@ function Hero() {
             href="https://linkedin.com/in/matheuspessoa1816"
             target="_blank"
             rel="noreferrer"
+            aria-label="Acessar LinkedIn de Matheus Pessoa"
           >
             <FaLinkedin />
             LinkedIn
           </a>
 
-          <a href="mailto:matheustelles1410@gmail.com">
+          <a
+            href="mailto:matheustelles1410@gmail.com"
+            aria-label="Enviar e-mail para Matheus Pessoa"
+          >
             <FaEnvelope />
-            Email
+            E-mail
           </a>
         </div>
       </div>
 
-      {/* VISUAL */}
       <div className="hero-visual">
+        <div className="hero-image-glow"></div>
+
         <img
           src={heroImg}
-          alt="Matheus Pessoa"
+          alt="Ilustração de Matheus Pessoa trabalhando com tecnologia"
           className="hero-character"
         />
       </div>
