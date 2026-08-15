@@ -20,7 +20,7 @@ function Education() {
       status: "Em andamento",
       statusType: "current",
       period: "5º período",
-      conclusion: "Conclusão prevista: Dez/2026",
+      conclusion: "Conclusão prevista: Ago/2027",
       description:
         "Formação voltada ao desenvolvimento de software, bancos de dados, engenharia de software, arquitetura de sistemas, testes e gestão de projetos.",
       tags: [

@@ -41,7 +41,7 @@ function About() {
     },
     {
       icon: <Award />,
-      value: "7+",
+      value: "10+",
       label: "Certificações e badges",
     },
     {

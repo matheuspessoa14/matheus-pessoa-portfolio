@@ -98,7 +98,7 @@ function Experience() {
               </div>
 
               <h4>
-                Estagiário em Administração e Marketing
+                Estagiário em Marketing e Administração
                 <span> — Processos e Sistemas</span>
               </h4>
 
