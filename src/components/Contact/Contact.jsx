@@ -7,9 +7,9 @@ import {
   FaEnvelope,
   FaWhatsapp,
   FaMapMarkerAlt,
-  FaBriefcase,
-  FaPlane,
-  FaHome,
+  FaCode,
+  FaDatabase,
+  FaCloud,
 } from "react-icons/fa";
 
 function Contact() {
@@ -23,14 +23,13 @@ function Contact() {
             <span className="section-tag">Contato</span>
 
             <h2>
-              Vamos conversar sobre{" "}
-              <span className="highlight">oportunidades</span>
+              Vamos <span className="highlight">conversar?</span>
             </h2>
 
             <p>
-              Estou disponível para oportunidades em tecnologia, com interesse
-              em desenvolvimento web, dados e inteligência artificial, nos
-              modelos presencial, híbrido ou remoto.
+              Estou aberto a trocar ideias sobre tecnologia, desenvolvimento
+              de software, dados e inteligência artificial, além de projetos,
+              networking e futuras oportunidades.
             </p>
           </div>
 
@@ -38,42 +37,41 @@ function Contact() {
             <div className="contact-main">
               <div className="contact-status">
                 <span className="contact-status-dot"></span>
-                Disponível para oportunidades em TI
+                Aberto a networking e novas conexões
               </div>
 
               <h3>Matheus Pessoa Telles</h3>
 
               <span className="contact-role">
-                Desenvolvimento Web • Dados • Inteligência Artificial
+                Full Stack Development • Dados • Cloud • Inteligência Artificial
               </span>
 
               <p>
-                Tenho disponibilidade para atuar no Rio de Janeiro e em São
-                Paulo, presencialmente ou em modelo híbrido, além de estar
-                aberto a oportunidades remotas. Também possuo disponibilidade
-                para viagens e mudança de cidade, conforme as necessidades da
-                oportunidade.
+                Atualmente atuo como Desenvolvedor Full Stack no Instituto
+                Fundação João Goulart (FJG), no Rio de Janeiro. Continuo
+                evoluindo profissionalmente por meio de projetos, estudos e
+                experiências práticas em tecnologia.
               </p>
 
               <div className="contact-meta">
                 <span>
                   <FaMapMarkerAlt />
-                  Rio de Janeiro e São Paulo
+                  Rio de Janeiro, RJ
                 </span>
 
                 <span>
-                  <FaHome />
-                  Presencial, híbrido ou remoto
+                  <FaCode />
+                  Desenvolvimento Web
                 </span>
 
                 <span>
-                  <FaPlane />
-                  Disponibilidade para viagens
+                  <FaDatabase />
+                  Dados & Inteligência Artificial
                 </span>
 
                 <span>
-                  <FaBriefcase />
-                  Disponibilidade para mudança
+                  <FaCloud />
+                  Cloud
                 </span>
               </div>
             </div>

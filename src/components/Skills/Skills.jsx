@@ -96,6 +96,7 @@ function Skills() {
         "Microsoft Azure",
         "AWS",
         "Cloud Computing",
+        "Figma",
         "Redes",
         "Cisco Packet Tracer",
         "VS Code",

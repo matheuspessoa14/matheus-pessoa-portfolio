@@ -10,22 +10,11 @@ import {
 import heroImg from "/glidi-photo.png";
 
 function Hero() {
-  const technologies = [
-    "React",
-    "Java",
-    "Spring Boot",
-    "Python",
-    "SQL",
-  ];
+  const technologies = ["React", "Java", "Spring Boot", "Python", "SQL"];
 
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <div className="hero-status">
-          <span className="status-dot"></span>
-          Disponível para oportunidades de estágio em TI
-        </div>
-
         <span className="hero-eyebrow">
           Desenvolvimento Web • Dados • Inteligência Artificial
         </span>
@@ -37,15 +26,16 @@ function Hero() {
 
         <p className="hero-description">
           Sou Matheus Pessoa Telles, graduado em Marketing e estudante de
-          Análise e Desenvolvimento de Sistemas. Desenvolvo aplicações web e
-          projetos full stack utilizando tecnologias como React, Java, Spring
-          Boot, Python e bancos de dados.
+          Análise e Desenvolvimento de Sistemas. Atualmente, atuo como
+          Desenvolvedor Full Stack no Instituto Fundação João Goulart (FJG),
+          desenvolvendo soluções web com React, JavaScript, Spring Boot, 
+          Python, Figma e bancos de dados.
         </p>
 
         <p className="hero-objective">
-          Busco uma oportunidade para contribuir com projetos reais, aprender
-          com profissionais experientes e evoluir nas áreas de desenvolvimento,
-          dados e inteligência artificial.
+          Minha trajetória combina tecnologia e visão de negócios, com foco em
+          desenvolvimento, dados, Cloud e Inteligência Artificial. Busco
+          transformar conhecimentos em soluções práticas que gerem valor.
         </p>
 
         <div className="hero-technologies">

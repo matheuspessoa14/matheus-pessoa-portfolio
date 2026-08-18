@@ -54,6 +54,11 @@
     background-color 0.25s ease;
 }
 
+/* Espaçamento entre experiências */
+.experience-card + .experience-card {
+  margin-top: 20px;
+}
+
 .experience-card::before {
   content: "";
 
